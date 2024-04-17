@@ -25,25 +25,11 @@ This object must contain the following required parameters:
 
 ```
 final paymentInfo = EcmpPaymentInfo(
-    projectId = 77655,
-    paymentId = "payment_322",
-    paymentAmount = 100,
-    paymentCurrency = "USD",
-    paymentDescription = "Cosmoshop payment",
-    customerId = "customer_003",
-    //Code of the customer's country
-    regionCode = "DE",
-    //Token associated with certain payment data
-    token = "o8i7u65y4t3rkjhgfdw3456789oikjhgfdfghjkl...",
-    //Payment interface language code
-    languageCode = "de",
-    //Data to be included in the notification with the list of the purchased items
-    receiptData = "eyAKICAicG9zaXRpb25zIjpbIAogICAgIIjoxLAogICAgICAgICJhbW91bnQiOjU5OTAsCiAgQ==",
-    //Parameter to enable hiding or displaying saved payment instruments
-    hideSavedWallets = false,
-    //Identifier of the preselected payment method
-    forcePaymentMethod = "card"
-)
+            projectId: 12312,
+            paymentId: "paymentId",
+            paymentAmount: 100,
+            paymentCurrency: "USD",
+          );
 ```
 2. Sign the parameters contained in the `EcmpPaymentInfo` object.
 
