@@ -11,6 +11,9 @@ ecmpplugin:
  path: [PATH_TO_PLUGIN]
 ```
 
+## Use
+### Opening payment form
+
 To open the payment form:
 1. Create the `EcmpPaymentInfo` object.
 
