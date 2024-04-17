@@ -4,8 +4,8 @@ A new Flutter plugin project.
 
 ## Getting Started
 
-Dowload this repository to your PC
-Add dependency in your flutter project
+- Dowload this repository to your PC
+- Add dependency in your flutter project
 ```
 ecmpplugin:
  path: [PATH_TO_PLUGIN]
