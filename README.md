@@ -19,10 +19,10 @@ To open the payment form:
 
 This object must contain the following required parameters:
 
-- `projectId`  (Integer) — a project identifier assigned by Ecommpay
+- `projectId`  (int) — a project identifier assigned by Ecommpay
 - `paymentId`  (String) — a payment identifier unique within the project
 - `paymentCurrency`  (String) — the payment currency code in the ISO 4217 alpha-3 format
-- `paymentAmount`  (Long) — the payment amount in the smallest currency units
+- `paymentAmount`  (int) — the payment amount in the smallest currency units
 - `customerId`  (String) — a customer's identifier within the project
 - `signature`  (String) — a request signature generated after all required parameters have been specified
 
