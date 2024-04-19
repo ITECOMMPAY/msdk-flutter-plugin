@@ -65,6 +65,5 @@ enum EcmpActionType { Sale, Auth, Tokenize, Verify }
 
 enum EcmpScreenDisplayMode {
   HIDE_SUCCESS_FINAL_SCREEN,
-  HIDE_DECLINE_FINAL_SCREEN,
-  DEFAULT
+  HIDE_DECLINE_FINAL_SCREEN
 }

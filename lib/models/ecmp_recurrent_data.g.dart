@@ -9,11 +9,11 @@ part of 'ecmp_recurrent_data.dart';
 EcmpRecurrentData _$EcmpRecurrentDataFromJson(Map<String, dynamic> json) =>
     EcmpRecurrentData(
       register: json['register'] as bool? ?? true,
-      type: json['type'] as String?,
+      type: $enumDecodeNullable(_$EcmpRecurrentTypeEnumMap, json['type']),
       expiryDay: json['expiryDay'] as String?,
       expiryMonth: json['expiryMonth'] as String?,
       expiryYear: json['expiryYear'] as String?,
-      period: json['period'] as String?,
+      period: $enumDecodeNullable(_$EcmpRecurrentPeriodEnumMap, json['period']),
       interval: json['interval'] as int?,
       time: json['time'] as String?,
       startDate: json['startDate'] as String?,
@@ -28,11 +28,11 @@ EcmpRecurrentData _$EcmpRecurrentDataFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$EcmpRecurrentDataToJson(EcmpRecurrentData instance) =>
     <String, dynamic>{
       'register': instance.register,
-      'type': instance.type,
+      'type': _$EcmpRecurrentTypeEnumMap[instance.type],
       'expiryDay': instance.expiryDay,
       'expiryMonth': instance.expiryMonth,
       'expiryYear': instance.expiryYear,
-      'period': instance.period,
+      'period': _$EcmpRecurrentPeriodEnumMap[instance.period],
       'interval': instance.interval,
       'time': instance.time,
       'startDate': instance.startDate,
@@ -40,6 +40,20 @@ Map<String, dynamic> _$EcmpRecurrentDataToJson(EcmpRecurrentData instance) =>
       'amount': instance.amount,
       'schedule': instance.schedule,
     };
+
+const _$EcmpRecurrentTypeEnumMap = {
+  EcmpRecurrentType.Regular: 'Regular',
+  EcmpRecurrentType.OneClick: 'OneClick',
+  EcmpRecurrentType.Autopayment: 'Autopayment',
+};
+
+const _$EcmpRecurrentPeriodEnumMap = {
+  EcmpRecurrentPeriod.Day: 'Day',
+  EcmpRecurrentPeriod.Week: 'Week',
+  EcmpRecurrentPeriod.Month: 'Month',
+  EcmpRecurrentPeriod.Quarter: 'Quarter',
+  EcmpRecurrentPeriod.Year: 'Year',
+};
 
 EcmpRecurrentDataSchedule _$EcmpRecurrentDataScheduleFromJson(
         Map<String, dynamic> json) =>

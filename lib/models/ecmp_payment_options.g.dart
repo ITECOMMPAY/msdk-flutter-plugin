@@ -72,7 +72,6 @@ const _$EcmpActionTypeEnumMap = {
 const _$EcmpScreenDisplayModeEnumMap = {
   EcmpScreenDisplayMode.HIDE_SUCCESS_FINAL_SCREEN: 'HIDE_SUCCESS_FINAL_SCREEN',
   EcmpScreenDisplayMode.HIDE_DECLINE_FINAL_SCREEN: 'HIDE_DECLINE_FINAL_SCREEN',
-  EcmpScreenDisplayMode.DEFAULT: 'DEFAULT',
 };
 
 const _$EcmpMockModeTypeEnumMap = {
