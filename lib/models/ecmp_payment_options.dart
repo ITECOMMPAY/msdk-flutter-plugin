@@ -57,13 +57,34 @@ class EcmpPaymentOptions {
   });
 
   Map<String, dynamic> toJson() => _$EcmpPaymentOptionsToJson(this);
+
+  factory EcmpPaymentOptions.fromJson(Map<String, dynamic> data) =>
+      _$EcmpPaymentOptionsFromJson(data);
 }
 
-enum EcmpMockModeType { DISABLED, SUCCESS, DECLINE }
+enum EcmpMockModeType {
+  @JsonValue("DISABLED")
+  disabled,
+  @JsonValue("SUCCESS")
+  success,
+  @JsonValue("DECLINE")
+  decline
+}
 
-enum EcmpActionType { Sale, Auth, Tokenize, Verify }
+enum EcmpActionType {
+  @JsonValue("Sale")
+  sale,
+  @JsonValue("Auth")
+  auth,
+  @JsonValue("Tokenize")
+  tokenize,
+  @JsonValue("Verify")
+  verify
+}
 
 enum EcmpScreenDisplayMode {
-  HIDE_SUCCESS_FINAL_SCREEN,
-  HIDE_DECLINE_FINAL_SCREEN
+  @JsonValue("HIDE_SUCCESS_FINAL_SCREEN")
+  hideSuccessFinalScreen,
+  @JsonValue("HIDE_DECLINE_FINAL_SCREEN")
+  hideDeclineFinalScreen
 }

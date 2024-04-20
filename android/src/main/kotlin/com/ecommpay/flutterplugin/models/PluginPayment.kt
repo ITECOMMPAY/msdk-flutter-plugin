@@ -6,7 +6,7 @@ import kotlinx.serialization.Serializable
 internal data class PluginPayment(
     val id: String,
     val status: String,
-    val paymentMethodType: String,
+    val method: String,
     val sum: Int,
     val type: String? = null,
     val token: String? = null,

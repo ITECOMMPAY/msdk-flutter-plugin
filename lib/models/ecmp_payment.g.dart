@@ -9,7 +9,7 @@ part of 'ecmp_payment.dart';
 EcmpPayment _$EcmpPaymentFromJson(Map<String, dynamic> json) => EcmpPayment(
       json['id'] as String,
       json['status'] as String,
-      json['paymentMethodType'] as String,
+      json['method'] as String,
       json['sum'] as int,
       json['type'] as String?,
       json['token'] as String?,
@@ -21,7 +21,7 @@ Map<String, dynamic> _$EcmpPaymentToJson(EcmpPayment instance) =>
     <String, dynamic>{
       'id': instance.id,
       'status': instance.status,
-      'paymentMethodType': instance.paymentMethodType,
+      'method': instance.method,
       'sum': instance.sum,
       'type': instance.type,
       'token': instance.token,

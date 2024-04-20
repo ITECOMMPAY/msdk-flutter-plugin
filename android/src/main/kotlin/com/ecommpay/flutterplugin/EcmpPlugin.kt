@@ -133,11 +133,11 @@ class EcmpPlugin : FlutterPlugin, MethodCallHandler, ActivityAware,
             if (pluginPaymentOptions.recurrentData != null)
                 recurrentData = EcmpRecurrentData(
                     register = pluginPaymentOptions.recurrentData.register,
-                    type = pluginPaymentOptions.recurrentData.type?.value,
+                    type = pluginPaymentOptions.recurrentData.type,
                     expiryDay = pluginPaymentOptions.recurrentData.expiryDay,
                     expiryMonth = pluginPaymentOptions.recurrentData.expiryMonth,
                     expiryYear = pluginPaymentOptions.recurrentData.expiryYear,
-                    period = pluginPaymentOptions.recurrentData.period?.value,
+                    period = pluginPaymentOptions.recurrentData.period,
                     interval = pluginPaymentOptions.recurrentData.interval,
                     time = pluginPaymentOptions.recurrentData.time,
                     startDate = pluginPaymentOptions.recurrentData.startDate,

@@ -42,17 +42,17 @@ Map<String, dynamic> _$EcmpRecurrentDataToJson(EcmpRecurrentData instance) =>
     };
 
 const _$EcmpRecurrentTypeEnumMap = {
-  EcmpRecurrentType.Regular: 'Regular',
-  EcmpRecurrentType.OneClick: 'OneClick',
-  EcmpRecurrentType.Autopayment: 'Autopayment',
+  EcmpRecurrentType.regular: 'R',
+  EcmpRecurrentType.oneClick: 'C',
+  EcmpRecurrentType.autopayment: 'U',
 };
 
 const _$EcmpRecurrentPeriodEnumMap = {
-  EcmpRecurrentPeriod.Day: 'Day',
-  EcmpRecurrentPeriod.Week: 'Week',
-  EcmpRecurrentPeriod.Month: 'Month',
-  EcmpRecurrentPeriod.Quarter: 'Quarter',
-  EcmpRecurrentPeriod.Year: 'Year',
+  EcmpRecurrentPeriod.day: 'D',
+  EcmpRecurrentPeriod.week: 'W',
+  EcmpRecurrentPeriod.month: 'M',
+  EcmpRecurrentPeriod.quarter: 'Q',
+  EcmpRecurrentPeriod.year: 'Y',
 };
 
 EcmpRecurrentDataSchedule _$EcmpRecurrentDataScheduleFromJson(

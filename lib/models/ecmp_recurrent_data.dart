@@ -82,22 +82,22 @@ class EcmpRecurrentDataSchedule {
 
 enum EcmpRecurrentType {
   @JsonValue("R")
-  Regular,
+  regular,
   @JsonValue("C")
-  OneClick,
+  oneClick,
   @JsonValue("U")
-  Autopayment
+  autopayment
 }
 
 enum EcmpRecurrentPeriod {
   @JsonValue("D")
-  Day,
+  day,
   @JsonValue("W")
-  Week,
+  week,
   @JsonValue("M")
-  Month,
+  month,
   @JsonValue("Q")
-  Quarter,
+  quarter,
   @JsonValue("Y")
-  Year
+  year
 }

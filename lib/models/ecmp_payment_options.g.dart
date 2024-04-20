@@ -63,19 +63,19 @@ Map<String, dynamic> _$EcmpPaymentOptionsToJson(EcmpPaymentOptions instance) =>
     };
 
 const _$EcmpActionTypeEnumMap = {
-  EcmpActionType.Sale: 'Sale',
-  EcmpActionType.Auth: 'Auth',
-  EcmpActionType.Tokenize: 'Tokenize',
-  EcmpActionType.Verify: 'Verify',
+  EcmpActionType.sale: 'Sale',
+  EcmpActionType.auth: 'Auth',
+  EcmpActionType.tokenize: 'Tokenize',
+  EcmpActionType.verify: 'Verify',
 };
 
 const _$EcmpScreenDisplayModeEnumMap = {
-  EcmpScreenDisplayMode.HIDE_SUCCESS_FINAL_SCREEN: 'HIDE_SUCCESS_FINAL_SCREEN',
-  EcmpScreenDisplayMode.HIDE_DECLINE_FINAL_SCREEN: 'HIDE_DECLINE_FINAL_SCREEN',
+  EcmpScreenDisplayMode.hideSuccessFinalScreen: 'HIDE_SUCCESS_FINAL_SCREEN',
+  EcmpScreenDisplayMode.hideDeclineFinalScreen: 'HIDE_DECLINE_FINAL_SCREEN',
 };
 
 const _$EcmpMockModeTypeEnumMap = {
-  EcmpMockModeType.DISABLED: 'DISABLED',
-  EcmpMockModeType.SUCCESS: 'SUCCESS',
-  EcmpMockModeType.DECLINE: 'DECLINE',
+  EcmpMockModeType.disabled: 'DISABLED',
+  EcmpMockModeType.success: 'SUCCESS',
+  EcmpMockModeType.decline: 'DECLINE',
 };

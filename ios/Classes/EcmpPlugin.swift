@@ -119,7 +119,7 @@ public class EcmpPlugin: NSObject, FlutterPlugin {
                 payment: sdkResult.payment != nil ? PluginPayment(
                     id: sdkResult.payment!.id ?? "",
                     status: sdkResult.payment!.status ?? "",
-                    paymentMethodType: sdkResult.payment!.method ?? "",
+                    method: sdkResult.payment!.method ?? "",
                     sum: sdkResult.payment!.sum,
                     type: sdkResult.payment!.type,
                     token: sdkResult.payment!.token,

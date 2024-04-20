@@ -35,15 +35,13 @@ class ProductDetailsPage extends StatelessWidget {
           paymentInfo.signature = "signature";
 
           final paymentOptions = EcmpPaymentOptions(
-            actionType: EcmpActionType.Sale,
+            actionType: EcmpActionType.sale,
             paymentInfo: paymentInfo,
             isDarkTheme: false,
             //if need use real service- set EcmpMockModeType.DISABLED
-            mockModeType: EcmpMockModeType.SUCCESS,
+            mockModeType: EcmpMockModeType.success,
             //set display mode if need
-            screenDisplayModes: [
-              EcmpScreenDisplayMode.HIDE_SUCCESS_FINAL_SCREEN
-            ],
+            screenDisplayModes: [EcmpScreenDisplayMode.hideDeclineFinalScreen],
             //set additional fields if need
             additionalFields: [
               EcmpAdditionalField(type: "email", value: "mail@mail.com"),

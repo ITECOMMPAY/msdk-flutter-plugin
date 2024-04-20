@@ -6,14 +6,14 @@ part 'ecmp_payment.g.dart';
 class EcmpPayment {
   final String id;
   final String status;
-  final String paymentMethodType;
+  final String method;
   final int sum;
   final String? type;
   final String? token;
   final String? currency;
   final String? paymentMassage;
 
-  EcmpPayment(this.id, this.status, this.paymentMethodType, this.sum, this.type,
+  EcmpPayment(this.id, this.status, this.method, this.sum, this.type,
       this.token, this.currency, this.paymentMassage);
 
   Map<String, dynamic> toJson() => _$EcmpPaymentToJson(this);

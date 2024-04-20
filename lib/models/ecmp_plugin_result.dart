@@ -10,7 +10,8 @@ class EcmpPluginResult {
   final String? errorCode;
   final String? errorMessage;
 
-  EcmpPluginResult(this.resultCode, this.payment, this.errorCode, this.errorMessage);
+  EcmpPluginResult(
+      this.resultCode, this.payment, this.errorCode, this.errorMessage);
 
   Map<String, dynamic> toJson() => _$EcmpPluginResultToJson(this);
 
