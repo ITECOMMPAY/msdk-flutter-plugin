@@ -1,4 +1,4 @@
-import 'package:ecmpplugin/ecmpplugin.dart';
+import 'package:ecommpay_flutter_plugin/ecmpplugin.dart';
 import 'package:flutter/material.dart';
 
 import 'product_details_page.dart';

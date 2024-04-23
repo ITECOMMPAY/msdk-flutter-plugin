@@ -1,4 +1,4 @@
-import 'package:ecmpplugin/models/ecmp_payment_info.dart';
+import 'package:ecommpay_flutter_plugin/models/ecmp_payment_info.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 import 'ecmpplugin_method_channel.dart';

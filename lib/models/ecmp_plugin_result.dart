@@ -1,4 +1,4 @@
-import 'package:ecmpplugin/models/ecmp_payment.dart';
+import 'package:ecommpay_flutter_plugin/models/ecmp_payment.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'ecmp_plugin_result.g.dart';

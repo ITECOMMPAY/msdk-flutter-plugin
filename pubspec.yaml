@@ -1,5 +1,5 @@
-name: ecmpplugin
-description: A new Flutter plugin project.
+name: ecommpay_flutter_plugin
+description: Flutter plugin for mSDK UI.
 version: 1.0.0
 homepage: https://github.com/ITECOMMPAY/msdk-flutter-plugin
 

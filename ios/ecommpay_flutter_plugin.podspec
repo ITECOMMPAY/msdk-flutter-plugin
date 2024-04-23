@@ -3,7 +3,7 @@
 # Run `pod lib lint ecmpplugin.podspec` to validate before publishing.
 #
 Pod::Spec.new do |s|
-  s.name             = 'ecmpplugin'
+  s.name             = 'ecommpay_flutter_plugin'
   s.version          = '1.0.0'
   s.summary          = 'Flutter plugin of ECMP MSDK'
   s.description      = <<-DESC

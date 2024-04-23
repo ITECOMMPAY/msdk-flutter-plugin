@@ -1,9 +1,9 @@
-import 'package:ecmpplugin/ecmpplugin.dart';
-import 'package:ecmpplugin/models/ecmp_additional_field.dart';
-import 'package:ecmpplugin/models/ecmp_payment_info.dart';
-import 'package:ecmpplugin/models/ecmp_payment_options.dart';
-import 'package:ecmpplugin/models/ecmp_recipient_info.dart';
-import 'package:ecmpplugin/models/ecmp_recurrent_data.dart';
+import 'package:ecommpay_flutter_plugin/ecmpplugin.dart';
+import 'package:ecommpay_flutter_plugin/models/ecmp_additional_field.dart';
+import 'package:ecommpay_flutter_plugin/models/ecmp_payment_info.dart';
+import 'package:ecommpay_flutter_plugin/models/ecmp_payment_options.dart';
+import 'package:ecommpay_flutter_plugin/models/ecmp_recipient_info.dart';
+import 'package:ecommpay_flutter_plugin/models/ecmp_recurrent_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -38,8 +38,8 @@ class ProductDetailsPage extends StatelessWidget {
             actionType: EcmpActionType.sale,
             paymentInfo: paymentInfo,
             isDarkTheme: false,
-            //if need use real service- set EcmpMockModeType.DISABLED
-            mockModeType: EcmpMockModeType.disabled,
+            //if need use real service- set EcmpMockModeType.disabled
+            mockModeType: EcmpMockModeType.success,
             //set display mode if need
             screenDisplayModes: [EcmpScreenDisplayMode.hideDeclineFinalScreen],
             //set additional fields if need
