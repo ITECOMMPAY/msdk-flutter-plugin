@@ -1,16 +1,5 @@
 # MSDK UI Flutter plugin
 
-A new Flutter plugin project.
-
-## Getting Started
-
-- Dowload this repository to your PC
-- Add dependency in your flutter project
-```
-ecmpplugin:
- path: [PATH_TO_PLUGIN]
-```
-
 ## Use
 ### Opening payment form
 
@@ -42,10 +31,10 @@ paymentInfo.signature = "CALCULATED_SIGNATURE_FROM_YOUR_BACKEND";
 ```
 
 3. Create the `EcmpPaymentOptions` object that contains the required parameter `actionType` (enum) with the value specifying the required operation type:
-- `EcmpActionType.Sale`
-- `EcmpActionType.Auth`
-- `EcmpActionType.Verify`
-- `EcmpActionType.Tokenize`
+- `EcmpActionType.sale`
+- `EcmpActionType.auth`
+- `EcmpActionType.verify`
+- `EcmpActionType.tokenize`
 In addition to the required  `EcmpPaymentInfo`  object and the  `actionType`  parameter, the following example contains several additional parameters including the  `EcmpAdditionalFields`  object with data specified in the fields that are used for collecting customer information.
 
 ```
@@ -53,11 +42,11 @@ In addition to the required  `EcmpPaymentInfo`  object and the  `actionType`  pa
     actionType: EcmpActionType.Sale,
     paymentInfo: paymentInfo,
     isDarkTheme: false,
-    //if need use real service- set EcmpMockModeType.DISABLED
-    mockModeType: EcmpMockModeType.SUCCESS,
+    //if need use real service- set EcmpMockModeType.disabled
+    mockModeType: EcmpMockModeType.success,
     //set display mode if need
     screenDisplayModes: [
-      EcmpScreenDisplayMode.HIDE_SUCCESS_FINAL_SCREEN
+      EcmpScreenDisplayMode.hideDeclineFinalScreen
     ],
     //set additional fields if need
     additionalFields: [

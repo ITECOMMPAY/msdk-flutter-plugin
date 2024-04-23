@@ -39,7 +39,7 @@ class ProductDetailsPage extends StatelessWidget {
             paymentInfo: paymentInfo,
             isDarkTheme: false,
             //if need use real service- set EcmpMockModeType.DISABLED
-            mockModeType: EcmpMockModeType.success,
+            mockModeType: EcmpMockModeType.disabled,
             //set display mode if need
             screenDisplayModes: [EcmpScreenDisplayMode.hideDeclineFinalScreen],
             //set additional fields if need
