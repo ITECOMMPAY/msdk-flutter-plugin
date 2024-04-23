@@ -1,6 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import 'ecmp_additional_field.dart';
 
 part 'ecmp_payment_info.g.dart';
 
