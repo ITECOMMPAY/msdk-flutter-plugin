@@ -15,7 +15,7 @@ A new Flutter plugin project.
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
-  s.dependency 'EcommpaySDK_UI', '3.6.0'
+  s.dependency 'EcommpaySDK_UI', '3.6.1'
   s.platform = :ios, '15.6'
 
   s.ios.deployment_target = '15.6'
