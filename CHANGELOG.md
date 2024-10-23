@@ -4,3 +4,4 @@
 ## [1.0.3] - Upgrade msdk's versions
 ## [1.0.4] - Upgrade iOS msdk versions
 ## [1.0.5] - Bump android lib versions
+## [1.0.6] - Bump ios lib versions
