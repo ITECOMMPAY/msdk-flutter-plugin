@@ -3,3 +3,4 @@
 ## [1.0.2] - Fix metadata and description
 ## [1.0.3] - Upgrade msdk's versions
 ## [1.0.4] - Upgrade iOS msdk versions
+## [1.0.5] - Bump android lib versions
