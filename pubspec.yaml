@@ -1,6 +1,6 @@
 name: ecommpay_flutter_plugin
 description: Flutter plugin of Mobile SDK UI is a software development kit that can be used to integrate Android applications with the Ecommpay payment platform.
-version: 1.0.6
+version: 1.0.7
 homepage: https://github.com/ITECOMMPAY/msdk-flutter-plugin
 
 environment:
