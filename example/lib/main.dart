@@ -4,6 +4,7 @@ import 'package:ecommpay_flutter_plugin/models/ecmp_payment_info.dart';
 import 'package:ecommpay_flutter_plugin/models/ecmp_payment_options.dart';
 import 'package:ecommpay_flutter_plugin/models/ecmp_recipient_info.dart';
 import 'package:ecommpay_flutter_plugin/models/ecmp_recurrent_data.dart';
+import 'package:ecommpay_flutter_plugin_example/signature_generator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -41,7 +42,7 @@ class ProductDetailsPage extends StatelessWidget {
           final ecmpPlugin = EcmpPlugin();
           //create payment info
           final paymentInfo = EcmpPaymentInfo(
-            projectId: 12312,
+            projectId: 138723,
             paymentId: "paymentId",
             paymentAmount: 100,
             paymentCurrency: "USD",
@@ -52,7 +53,8 @@ class ProductDetailsPage extends StatelessWidget {
               await ecmpPlugin.getParamsForSignature(paymentInfo);
           debugPrint(paramsForSignature);
           //calculate and set signature and set it inti payment info
-          paymentInfo.signature = "signature";
+          paymentInfo.signature = SignatureGenerator.generateSignature(
+              paramsForSignature!, "secret key");
 
           final paymentOptions = EcmpPaymentOptions(
             actionType: EcmpActionType.sale,
