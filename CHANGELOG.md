@@ -7,3 +7,4 @@
 ## [1.0.6] - Bump ios lib versions
 ## [1.0.7] - fix android gradle config
 ## [1.0.7] - upgrade android
+## [1.0.8] - upgrade android msdk version

@@ -53,6 +53,6 @@ android {
 }
 
 dependencies {
-    implementation "com.ecommpay:msdk-ui:3.6.5"
+    implementation "com.ecommpay:msdk-ui:3.7.0"
     implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.2"
 }
