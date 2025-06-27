@@ -154,6 +154,7 @@ class EcmpPlugin : FlutterPlugin, MethodCallHandler, ActivityAware,
             //Parameter to enable hiding or displaying scanning cards feature
             hideScanningCards = pluginPaymentOptions.hideScanningCards ?: false
             isDarkTheme = pluginPaymentOptions.isDarkTheme
+            brandColor = pluginPaymentOptions.brandColor
         }
 
         contextReference.get()?.let { context ->
