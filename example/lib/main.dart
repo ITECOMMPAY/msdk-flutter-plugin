@@ -73,7 +73,6 @@ class ProductDetailsPage extends StatelessWidget {
             recipientInfo: EcmpRecipientInfo(),
             //set recurrent info if need
             recurrentData: EcmpRecurrentData(),
-            brandColor: "#ff5733"
           );
 
           try {
