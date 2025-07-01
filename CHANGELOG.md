@@ -10,3 +10,4 @@
 ## [1.0.8] - upgrade android
 ## [1.0.9] - upgrade android msdk version
 ## [1.1.0] - Fix dropdown menu showing. Upgrade msdk versions (ios 3.8.3, android 3.8.5). Upgrade android dependencies
+## [1.1.1] - Fix color setting in android and ios. Update internal SDK. Android 3.8.6 and iOS 3.8.4
