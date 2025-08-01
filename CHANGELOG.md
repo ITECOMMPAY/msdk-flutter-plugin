@@ -13,3 +13,4 @@
 ## [1.1.1] - Fix color setting in android and ios. Update internal SDK. Android 3.8.6 and iOS 3.8.4
 ## [1.1.2] - Update android SDK to 3.8.7 (Disable card scanning)
 ## [1.1.3] - Update android SDK to 3.8.8 and iOS to 3.8.5 (Fix phone field processing)
+## [1.1.4] - Update android SDK to 3.8.9 and iOS to 3.8.8 (Implement option preselection from additional field)
