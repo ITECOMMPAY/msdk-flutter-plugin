@@ -1,12 +1,11 @@
 import Flutter
 import UIKit
-import ecommpaySDK
+import EcommpaySDK
 
 public class EcmpPlugin: NSObject, FlutterPlugin {
     
-    private let ecompaySDK = EcommpaySDK()
-    
-    public static func register(with registrar: FlutterPluginRegistrar) {
+    private let ecompaySDK = EcommpaySDKEntity()
+    @objc public static func register(with registrar: FlutterPluginRegistrar) {
         let channel = FlutterMethodChannel(name: "ecmpplugin", binaryMessenger: registrar.messenger())
         let instance = EcmpPlugin()
         registrar.addMethodCallDelegate(instance, channel: channel)

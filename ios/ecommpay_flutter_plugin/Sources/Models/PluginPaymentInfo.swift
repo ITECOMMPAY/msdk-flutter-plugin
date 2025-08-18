@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import ecommpaySDK
+import EcommpaySDK
 
 internal struct PluginPaymentInfo: Decodable {
     let projectId: Int32

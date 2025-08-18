@@ -14,3 +14,4 @@
 ## [1.1.2] - Update android SDK to 3.8.7 (Disable card scanning)
 ## [1.1.3] - Update android SDK to 3.8.8 and iOS to 3.8.5 (Fix phone field processing)
 ## [1.1.4] - Update android SDK to 3.8.9 and iOS to 3.8.8 (Implement option preselection from additional field)
+## [1.2.0] - Migrate from cocoapods to SPM dependency in iOS project
