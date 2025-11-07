@@ -1,5 +1,5 @@
 group 'com.ecommpay.flutterplugin'
-version '1.0-SNAPSHOT'
+version '1.0'
 
 allprojects {
     repositories {
@@ -13,7 +13,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'org.jetbrains.kotlin.plugin.serialization'
 
 android {
-    compileSdkVersion 35
+    compileSdkVersion 36
     namespace "com.ecommpay.flutterplugin"
 
     compileOptions {
@@ -55,6 +55,6 @@ android {
 
 dependencies {
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.3")
-    implementation "com.ecommpay:msdk-ui:3.8.9"
+    implementation "com.ecommpay:msdk-ui:3.9.1"
     implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.2"
 }

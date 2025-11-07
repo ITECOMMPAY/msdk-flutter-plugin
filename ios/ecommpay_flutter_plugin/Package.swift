@@ -6,13 +6,13 @@ import PackageDescription
 let package = Package(
     name: "ecommpay_flutter_plugin",
     platforms: [
-        .iOS("15.6"),
+        .iOS("16.6"),
     ],
     products: [
         .library(name: "ecommpay-flutter-plugin", targets: ["ecommpay_flutter_plugin"])
     ],
     dependencies: [
-        .package(url: "https://github.com/ITECOMMPAY/mobile-sdk-ios-ui.git", exact: "3.9.0")
+        .package(url: "https://github.com/ITECOMMPAY/mobile-sdk-ios-ui.git", exact: "4.0.0")
     ],
     targets: [
         .target(

@@ -4,7 +4,7 @@ import EcommpaySDK
 
 public class EcmpPlugin: NSObject, FlutterPlugin {
     
-    private let ecompaySDK = EcommpaySDKEntity()
+    private let ecompaySDK = Ecommpay()
     @objc public static func register(with registrar: FlutterPluginRegistrar) {
         let channel = FlutterMethodChannel(name: "ecmpplugin", binaryMessenger: registrar.messenger())
         let instance = EcmpPlugin()
@@ -66,7 +66,8 @@ public class EcmpPlugin: NSObject, FlutterPlugin {
         paymentOptions.hideSavedWallets = pluginPaymentOptions.hideScanningCards ?? false
         paymentOptions.hideSavedWallets = pluginPaymentOptions.paymentInfo.hideSavedWallets ?? false
         paymentOptions.isDarkThemeOn = pluginPaymentOptions.isDarkTheme ?? false
-        paymentOptions.brandColor = pluginPaymentOptions.brandColor != nil ? UIColor(hex: pluginPaymentOptions.brandColor!) : nil
+        paymentOptions.primaryBrandColor = pluginPaymentOptions.primaryBrandColor != nil ? UIColor(hex: pluginPaymentOptions.primaryBrandColor!) : nil
+        paymentOptions.secondaryBrandColor = pluginPaymentOptions.secondaryBrandColor != nil ? UIColor(hex: pluginPaymentOptions.secondaryBrandColor!) : nil
         paymentOptions.storedCardType = pluginPaymentOptions.storedCardType != nil ? NSNumber(value: pluginPaymentOptions.storedCardType!) : nil
         
         

@@ -65,6 +65,7 @@ internal struct PluginPaymentOptions: Decodable {
     let applePayDescription: String?
     let applePayCountryCode: String?
     let isDarkTheme: Bool?
-    let brandColor: String?
+    let primaryBrandColor: String?
+    let secondaryBrandColor: String?
     let storedCardType: Int?
 }
