@@ -33,7 +33,9 @@ EcmpPaymentOptions _$EcmpPaymentOptionsFromJson(Map<String, dynamic> json) =>
       applePayDescription: json['applePayDescription'] as String?,
       applePayCountryCode: json['applePayCountryCode'] as String?,
       isDarkTheme: json['isDarkTheme'] as bool,
-      brandColor: json['brandColor'] as String?,
+      primaryBrandColor: json['primaryBrandColor'] as String?,
+      secondaryBrandColor: json['primaryBrandColor'] as String?,
+      hideFooterLogo: json['hideFooterLogo'] as bool?,
       storedCardType: json['storedCardType'] as int?,
       mockModeType:
           $enumDecode(_$EcmpMockModeTypeEnumMap, json['mockModeType']),
@@ -57,7 +59,9 @@ Map<String, dynamic> _$EcmpPaymentOptionsToJson(EcmpPaymentOptions instance) =>
       'applePayDescription': instance.applePayDescription,
       'applePayCountryCode': instance.applePayCountryCode,
       'isDarkTheme': instance.isDarkTheme,
-      'brandColor': instance.brandColor,
+      'primaryBrandColor': instance.primaryBrandColor,
+      'secondaryBrandColor': instance.secondaryBrandColor,
+      "hideFooterLogo": instance.hideFooterLogo,
       'storedCardType': instance.storedCardType,
       'mockModeType': _$EcmpMockModeTypeEnumMap[instance.mockModeType]!,
     };

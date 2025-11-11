@@ -30,7 +30,9 @@ class EcmpPaymentOptions {
 
   // theme customization
   final bool isDarkTheme;
-  final String? brandColor;
+  final String? primaryBrandColor;
+  final String? secondaryBrandColor;
+  final bool? hideFooterLogo;
   final int? storedCardType;
 
   //mock mode
@@ -51,7 +53,9 @@ class EcmpPaymentOptions {
     this.applePayDescription,
     this.applePayCountryCode,
     required this.isDarkTheme,
-    this.brandColor,
+    this.primaryBrandColor,
+    this.secondaryBrandColor,
+    this.hideFooterLogo,
     this.storedCardType,
     required this.mockModeType,
   });

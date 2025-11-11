@@ -17,10 +17,11 @@ internal data class PluginPaymentOptions(
     val googleIsTestEnvironment: Boolean?,
     //theme customization
     val isDarkTheme: Boolean,
-    val brandColor: String?,
+    val primaryBrandColor: String?,
+    val secondaryBrandColor: String?,
     val footerLabel: String?,
+    val hideFooterLogo: Boolean = false,
     val storedCardType: Int?,
-    //
     val mockModeType: PluginMockModeType
 )
 

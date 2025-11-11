@@ -10,7 +10,7 @@ import com.ecommpay.flutterplugin.models.PluginPaymentOptions
 import com.ecommpay.flutterplugin.models.PluginResult
 import com.ecommpay.msdk.ui.EcmpActionType
 import com.ecommpay.msdk.ui.EcmpAdditionalFieldType
-import com.ecommpay.msdk.ui.EcmpPaymentSDK
+import com.ecommpay.msdk.ui.Ecommpay
 import com.ecommpay.msdk.ui.EcmpRecipientInfo
 import com.ecommpay.msdk.ui.EcmpRecurrentData
 import com.ecommpay.msdk.ui.EcmpRecurrentDataSchedule
@@ -154,15 +154,17 @@ class EcmpPlugin : FlutterPlugin, MethodCallHandler, ActivityAware,
             //Parameter to enable hiding or displaying scanning cards feature
             hideScanningCards = pluginPaymentOptions.hideScanningCards ?: false
             isDarkTheme = pluginPaymentOptions.isDarkTheme
-            brandColor = pluginPaymentOptions.brandColor
+            primaryBrandColor = pluginPaymentOptions.primaryBrandColor
+            secondaryBrandColor = pluginPaymentOptions.secondaryBrandColor
+            hideEcommpayLogo = pluginPaymentOptions.hideFooterLogo ?: false
         }
 
         contextReference.get()?.let { context ->
             //4. Create sdk object
-            val sdk = EcmpPaymentSDK(
+            val sdk = Ecommpay(
                 context = context,
                 paymentOptions = paymentOptions,
-                mockModeType = EcmpPaymentSDK.EcmpMockModeType.valueOf(pluginPaymentOptions.mockModeType.name)
+                mockModeType = Ecommpay.EcmpMockModeType.valueOf(pluginPaymentOptions.mockModeType.name)
             )
             this.result = result
             activityReference.get()?.startActivityForResult(sdk.intent, 100)
@@ -171,8 +173,8 @@ class EcmpPlugin : FlutterPlugin, MethodCallHandler, ActivityAware,
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?): Boolean {
         when (resultCode) {
-            EcmpPaymentSDK.RESULT_SUCCESS -> {
-                val paymentJson = data?.getStringExtra(EcmpPaymentSDK.EXTRA_PAYMENT)
+            Ecommpay.RESULT_SUCCESS -> {
+                val paymentJson = data?.getStringExtra(Ecommpay.EXTRA_PAYMENT)
                 result?.success(
                     serializer.encodeToString(
                         PluginResult.serializer(),
@@ -186,9 +188,9 @@ class EcmpPlugin : FlutterPlugin, MethodCallHandler, ActivityAware,
                 )
             }
 
-            EcmpPaymentSDK.RESULT_ERROR -> {
-                val errorCode = data?.getStringExtra(EcmpPaymentSDK.EXTRA_ERROR_CODE)
-                val errorMessage = data?.getStringExtra(EcmpPaymentSDK.EXTRA_ERROR_MESSAGE)
+            Ecommpay.RESULT_ERROR -> {
+                val errorCode = data?.getStringExtra(Ecommpay.EXTRA_ERROR_CODE)
+                val errorMessage = data?.getStringExtra(Ecommpay.EXTRA_ERROR_MESSAGE)
                 result?.success(
                     serializer.encodeToString(
                         PluginResult.serializer(),
