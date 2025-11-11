@@ -156,6 +156,7 @@ class EcmpPlugin : FlutterPlugin, MethodCallHandler, ActivityAware,
             isDarkTheme = pluginPaymentOptions.isDarkTheme
             primaryBrandColor = pluginPaymentOptions.primaryBrandColor
             secondaryBrandColor = pluginPaymentOptions.secondaryBrandColor
+            hideEcommpayLogo = pluginPaymentOptions.hideFooterLogo ?: false
         }
 
         contextReference.get()?.let { context ->

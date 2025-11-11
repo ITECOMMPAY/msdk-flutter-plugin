@@ -67,5 +67,6 @@ internal struct PluginPaymentOptions: Decodable {
     let isDarkTheme: Bool?
     let primaryBrandColor: String?
     let secondaryBrandColor: String?
+    let hideFooterLogo: Bool?
     let storedCardType: Int?
 }

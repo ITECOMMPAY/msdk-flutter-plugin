@@ -20,8 +20,8 @@ internal data class PluginPaymentOptions(
     val primaryBrandColor: String?,
     val secondaryBrandColor: String?,
     val footerLabel: String?,
+    val hideFooterLogo: Boolean = false,
     val storedCardType: Int?,
-    //
     val mockModeType: PluginMockModeType
 )
 

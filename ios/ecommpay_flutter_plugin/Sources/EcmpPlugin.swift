@@ -69,7 +69,7 @@ public class EcmpPlugin: NSObject, FlutterPlugin {
         paymentOptions.primaryBrandColor = pluginPaymentOptions.primaryBrandColor != nil ? UIColor(hex: pluginPaymentOptions.primaryBrandColor!) : nil
         paymentOptions.secondaryBrandColor = pluginPaymentOptions.secondaryBrandColor != nil ? UIColor(hex: pluginPaymentOptions.secondaryBrandColor!) : nil
         paymentOptions.storedCardType = pluginPaymentOptions.storedCardType != nil ? NSNumber(value: pluginPaymentOptions.storedCardType!) : nil
-        
+        paymentOptions.hideFooterLogo = pluginPaymentOptions.hideFooterLogo != nil ? pluginPaymentOptions.hideFooterLogo! : false
         
         if let recurrentData  = pluginPaymentOptions.recurrentData {
             paymentOptions.recurrentInfo = RecurrentInfo(
