@@ -12,7 +12,7 @@ let package = Package(
         .library(name: "ecommpay-flutter-plugin", targets: ["ecommpay_flutter_plugin"])
     ],
     dependencies: [
-        .package(url: "https://github.com/ITECOMMPAY/mobile-sdk-ios-ui.git", exact: "4.0.0")
+        .package(url: "https://github.com/ITECOMMPAY/mobile-sdk-ios-ui.git", exact: "4.0.1")
     ],
     targets: [
         .target(
