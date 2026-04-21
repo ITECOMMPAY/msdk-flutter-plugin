@@ -28,18 +28,38 @@ public class EcmpPlugin: NSObject, FlutterPlugin {
     
     private func getParamsForSignature(json: String, result: @escaping FlutterResult) {
         let jsonData = json.data(using: .utf8)!
-        let paymentInfo: PluginPaymentInfo = try! JSONDecoder().decode(PluginPaymentInfo.self, from: jsonData)
-        let paramsForSignature = paymentInfo.map().paramsForSignature
-        result(paramsForSignature)
+        do {
+            let paymentInfo: PluginPaymentInfo = try JSONDecoder().decode(PluginPaymentInfo.self, from: jsonData)
+            let paramsForSignature = paymentInfo.map().paramsForSignature
+            result(paramsForSignature)
+        } catch {
+            result(FlutterError(code: "DECODING_ERROR", message: error.localizedDescription, details: nil))
+        }
     }
     
     private func sdkRun(json: String, result: @escaping FlutterResult) {
-        guard let controller = UIApplication.shared.delegate?.window??.rootViewController  as? FlutterViewController else {
+        var rootViewController: UIViewController?
+        if #available(iOS 13.0, *) {
+            rootViewController = UIApplication.shared.connectedScenes
+                .compactMap { ($0 as? UIWindowScene)?.keyWindow }
+                .first?.rootViewController
+        } else {
+            rootViewController = UIApplication.shared.keyWindow?.rootViewController
+        }
+        
+        guard let controller = rootViewController else {
+            result(FlutterError(code: "NO_ROOT_VIEW_CONTROLLER", message: "Could not find root view controller", details: nil))
             return
         }
         
         let jsonData = json.data(using: .utf8)!
-        let pluginPaymentOptions: PluginPaymentOptions = try! JSONDecoder().decode(PluginPaymentOptions.self, from: jsonData)
+        let pluginPaymentOptions: PluginPaymentOptions
+        do {
+            pluginPaymentOptions = try JSONDecoder().decode(PluginPaymentOptions.self, from: jsonData)
+        } catch {
+            result(FlutterError(code: "DECODING_ERROR", message: error.localizedDescription, details: nil))
+            return
+        }
         
         
         let paymentOptions = PaymentOptions(projectID: pluginPaymentOptions.paymentInfo.projectId,
@@ -63,7 +83,7 @@ public class EcmpPlugin: NSObject, FlutterPlugin {
         paymentOptions.screenDisplayModes = Set(pluginPaymentOptions.screenDisplayModes?.map({ mode in
             mode.map()
         }) ?? [] )
-        paymentOptions.hideSavedWallets = pluginPaymentOptions.hideScanningCards ?? false
+        paymentOptions.hideScanningCards = pluginPaymentOptions.hideScanningCards ?? false
         paymentOptions.hideSavedWallets = pluginPaymentOptions.paymentInfo.hideSavedWallets ?? false
         paymentOptions.isDarkThemeOn = pluginPaymentOptions.isDarkTheme ?? false
         paymentOptions.primaryBrandColor = pluginPaymentOptions.primaryBrandColor != nil ? UIColor(hex: pluginPaymentOptions.primaryBrandColor!) : nil

@@ -43,6 +43,7 @@ class EcmpPlugin : FlutterPlugin, MethodCallHandler, ActivityAware,
         ignoreUnknownKeys = true
         allowSpecialFloatingPointValues = true
         explicitNulls = false
+        coerceInputValues = true
         encodeDefaults = true
     }
 
@@ -153,7 +154,7 @@ class EcmpPlugin : FlutterPlugin, MethodCallHandler, ActivityAware,
                 )
             //Parameter to enable hiding or displaying scanning cards feature
             hideScanningCards = pluginPaymentOptions.hideScanningCards ?: false
-            isDarkTheme = pluginPaymentOptions.isDarkTheme
+            isDarkTheme = pluginPaymentOptions.isDarkTheme ?: false
             primaryBrandColor = pluginPaymentOptions.primaryBrandColor
             secondaryBrandColor = pluginPaymentOptions.secondaryBrandColor
             hideEcommpayLogo = pluginPaymentOptions.hideFooterLogo ?: false

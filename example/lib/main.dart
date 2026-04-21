@@ -52,9 +52,15 @@ class ProductDetailsPage extends StatelessWidget {
           final paramsForSignature =
               await ecmpPlugin.getParamsForSignature(paymentInfo);
           debugPrint(paramsForSignature);
+
+          if (paramsForSignature == null) {
+            debugPrint("Error: paramsForSignature is null");
+            return;
+          }
+
           //calculate and set signature and set it inti payment info
           paymentInfo.signature = SignatureGenerator.generateSignature(
-              paramsForSignature!, "secret key");
+              paramsForSignature, "secret key");
 
           final paymentOptions = EcmpPaymentOptions(
             actionType: EcmpActionType.sale,
