@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "mobile-sdk-ios-ui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ITECOMMPAY/mobile-sdk-ios-ui.git",
+      "state" : {
+        "revision" : "0473d5d021ed2c126867ca47f9f65a9d9f956558",
+        "version" : "4.0.7"
+      }
+    }
+  ],
+  "version" : 2
+}

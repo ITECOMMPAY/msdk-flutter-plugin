@@ -16,3 +16,4 @@
 ## [1.1.4] - Update android SDK to 3.8.9 and iOS to 3.8.8 (Implement option preselection from additional field)
 ## [1.2.0] - Migrate from cocoapods to SPM dependency in iOS project
 ## [1.3.0] - Redesign, update android sdk 3.9.1 and ios sdk 4.0.1
+## [1.4.0] - Update android sdk 3.10.2 and ios sdk 4.0.7
